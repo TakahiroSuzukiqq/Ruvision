@@ -39,9 +39,13 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
       
         
 # Issue & Solution  
- In Rails 5.1.2 :   
- [couldn't find file 'jquery' with type 'application/javascript'](https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome)      
- [jquery-rails 4.3.1](https://rubygems.org/gems/jquery-rails/versions/4.3.1)   
+ In Rails 5.1.2, when I tried to implement Bootstrap and run on the local browser, the app said [couldn't find file 'jquery' with type 'application/javascript'](https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome).        
+ So just added [jquery-rails 4.3.1](https://rubygems.org/gems/jquery-rails/versions/4.3.1) in gem file and bundle install again.  
+ <a href="https://ibb.co/iOj2LQ"><img src="https://image.ibb.co/kZuPZk/Screen_Shot_2017_08_02_at_15_09_38.png" alt="Screen_Shot_2017_08_02_at_15_09_38" border="0"></a>  
+   
+     
+     
+
 
 
    
