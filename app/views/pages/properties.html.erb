@@ -1,9 +1,10 @@
 
+<%= image_tag(gravatar_image_url(ENV['EMAIL'].gsub('spam', 'mdeering'))) %>
+
 <% current_user.rooms.each do |room|%>
 <p><% room %></p>
 <p><% room.inspect %></p>
 <% end %>
-
 
 <h1>Rooms</h1>
 
