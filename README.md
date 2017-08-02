@@ -11,11 +11,11 @@ $ rails g devise user
 $ rake db:migrate   
 $ rails g controller pages home  
 $ rails g scaffold ANY_NAME_& CONDITIONS  
-  cg: $ rails g scaffold Room price:integer description:text title:string user:references capacity:integer pets:boolean smoking:boolean wifi:boolean bathrooms:integer bath:boolean share:boolean parties:boolean   
+  eg: $ rails g scaffold Room price:integer description:text title:string user:references capacity:integer pets:boolean smoking:boolean wifi:boolean bathrooms:integer bath:boolean share:boolean parties:boolean   
 $ rake db:migrate  
 $ 
 
- * You can see routes by typing `$ rake routes`  
+ * You can see each path by typing `$ rake routes` in your terminal   
 ````  
   
 ````  
