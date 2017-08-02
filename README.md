@@ -24,6 +24,8 @@ Gem installation
 gem 'devise' 
 gem 'bootstrap-sass', '~> 3.3.7'  
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'  
+gem 'gravatar_image_tag'  
+gem 'dotenv-rails', require: 'dotenv/rails-now'    
 ````    
   
   
@@ -43,13 +45,37 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
     [Bootstrap getting started](http://getbootstrap.com/getting-started/)  
     [gem 'bootstrap'](https://github.com/twbs/bootstrap-rubygem)  
       
-        
+  * Gravatar :  
+    [gravator.com](https://en.gravatar.com/)  
+    [gem 'gravatar-ultimate' for rails v. 3.1, 3.2, and 4.0](https://github.com/sinisterchipmunk/gravatar)    
+   
+  * Dotenv :  
+    [gem 'dotenv-rails'](https://github.com/bkeepers/dotenv)              
+    
+          
 # Issue & Solution  
+ * couldn't find file 'jquery' with type 'application/javascript  
  In Rails 5.1.2, when I tried to implement Bootstrap and run on the local browser, the app said [couldn't find file 'jquery' with type 'application/javascript'](https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome).        
  So just added [jquery-rails 4.3.1](https://rubygems.org/gems/jquery-rails/versions/4.3.1) in gem file and bundle install again.  
- <a href="https://ibb.co/iOj2LQ"><img src="https://image.ibb.co/kZuPZk/Screen_Shot_2017_08_02_at_15_09_38.png" alt="Screen_Shot_2017_08_02_at_15_09_38" border="0"></a>  
+ <a href="https://ibb.co/iOj2LQ"><img src="https://image.ibb.co/kZuPZk/Screen_Shot_2017_08_02_at_15_09_38.png" alt="Screen_Shot_2017_08_02_at_15_09_38" border="0"></a>    
    
-     
+  
+  
+ * Gravatar  
+   [gem 'gravatar-ultimate'](https://github.com/sinisterchipmunk/gravatar) is only supported for rails v3.1, 3.2, and 4.0+, and for some reason, I couldn't use it for rails v5.1.2 so I used [gem 'gravatar_image_tag'](https://github.com/mdeering/gravatar_image_tag) instead.  
+    ````  
+     <%= image_tag(gravatar_image_url('YOUR_RESISTERD_EMAIL_ADDRESS_FOR_GRAVATAR'.gsub('spam', 'mdeering'))) %>  
+    ````    
+      
+        
+
+
+
+       
+
+
+
+
      
 
 
