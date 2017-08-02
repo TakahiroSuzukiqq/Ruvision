@@ -1,24 +1,30 @@
-# README
+# Installation  
+````  
+Command Line  
+$ rails new YOUR_APP_NAME --database=postgresql  
+$ rake db:create  
+$ rake db:migrate  
+$ bundle install (after added gems)  
+$ rails g devise:install  
+$ rails g devise user  
+$ rake db:migrate   
+$ rails g controller pages home  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+````  
+  
+````  
+Gem installation  
+gem 'devise' 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+````    
+  
+  
+# Docs  
+  [gem 'devise'](https://github.com/plataformatec/devise)  
+    
+  [Foundation docs](http://foundation.zurb.com/sites/docs/installation.html)  
+  [Foundation apps](http://foundation.zurb.com/apps.html)  
+  [Foundation kitchen sink](http://foundation.zurb.com/sites/docs/kitchen-sink.html)  
+  [gem 'foundation-rails'](https://github.com/zurb/foundation-rails)   
+    
+r
