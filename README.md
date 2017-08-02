@@ -10,7 +10,12 @@ $ rails g devise:install
 $ rails g devise user  
 $ rake db:migrate   
 $ rails g controller pages home  
+$ rails g scaffold ANY_NAME_& CONDITIONS  
+  cg: $ rails g scaffold Room price:integer description:text title:string user:references capacity:integer pets:boolean smoking:boolean wifi:boolean bathrooms:integer bath:boolean share:boolean parties:boolean   
+$ rake db:migrate  
+$ 
 
+ * You can see routes by typing `$ rake routes`  
 ````  
   
 ````  
@@ -25,6 +30,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # Docs  
   * Devise :  
   [gem 'devise'](https://github.com/plataformatec/devise)  
+  [Login/out](https://github.com/plataformatec/devise/wiki/How-To:-Add-sign_in,-sign_out,-and-sign_up-links-to-your-layout-template)
       
   * Styling :  
     Foundation      
