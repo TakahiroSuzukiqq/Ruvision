@@ -37,15 +37,14 @@ gem 'carrierwave', '~> 1.0'
   * Devise :  
   [gem 'devise'](https://github.com/plataformatec/devise)  
   [Login/out](https://github.com/plataformatec/devise/wiki/How-To:-Add-sign_in,-sign_out,-and-sign_up-links-to-your-layout-template)
-      
-  * Styling :  
-    Foundation      
+       
+  * Foundation (styling) :     
     [Foundation docs](http://foundation.zurb.com/sites/docs/installation.html)  
     [Foundation apps](http://foundation.zurb.com/apps.html)  
     [Foundation kitchen sink](http://foundation.zurb.com/sites/docs/kitchen-sink.html)  
     [gem 'foundation-rails'](https://github.com/zurb/foundation-rails)   
     
-  * Bootstrap :  
+  * Bootstrap (styling) :  
     [Bootstrap getting started](http://getbootstrap.com/getting-started/)  
     [gem 'bootstrap'](https://github.com/twbs/bootstrap-rubygem)  
       
@@ -84,7 +83,7 @@ gem 'carrierwave', '~> 1.0'
      
        
     
-    
+
 
        
 
