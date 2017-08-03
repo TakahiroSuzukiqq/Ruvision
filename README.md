@@ -1,4 +1,4 @@
-# Installation  
+# Basic Installation  
 ````  
 Command Line    
   
@@ -10,17 +10,18 @@ $ rails g devise:install
 $ rails g devise user  
 $ rake db:migrate   
 $ rails g controller pages home  
-$ rails g scaffold "ANY NAME & CONDITIONS"  
+$ rails g scaffold "ANY CLASS NAME & CONDITIONS"  
    eg: $ rails g scaffold Room price:integer description:text ~~~       
 $ rake db:migrate  
 $ rails g uploader "UPLOADER NAME (eg:Room)"  
-$ rails g migration add_"ANY NAME"_to_"TABLE NAME" "ANYNAME:TYPE OF ATTRIBUTE"  
-$ rails g scaffold "ANY NAME & CONDITIONS"   
-   eg: $ rails g scaffold Booking starting_date:date ~~~      
-$ rake db:migrate     
+$ rails g migration add_"ANY CLASS NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRIBUTE"  
+Create Booking table & `rake db:migrate`    
+Add `approved` attribte to `bookings` table & `rake db:migrate`  
+  
 
  * You can see each path by typing `$ rake routes` in your terminal   
  * You can see the room you created by typing `$ rails c` & `Room.all`(all the rooms) or `Room.last`    
+ * You can add attributes to each post by typing like following. `b.update_attributes(user_id: 1)`  
 ````  
   
 ````  
@@ -83,15 +84,28 @@ gem 'carrierwave', '~> 1.0'
     
  * Duplicate error    
    If you will see error associated with database - schama and will not be able to do rake db:migrate, google `duplicate erro ` or `rake db:drop` like [this](https://stackoverflow.com/questions/4116067/purge-or-recreate-a-ruby-on-rails-database). But I don't recommend to delete `rake db:drop` & recreate db because you'll lose your existing db. I don't take any responsibility to this error and all of the issues associated with this project including README, as well.  
-     
+
+ * "User must exist" error    
+  When trying to book below error had caused so passed user id inside the `def create` function in the booking controller.   
+  <a href="https://ibb.co/hoPJCF"><img src="https://image.ibb.co/jF1bzv/Screen_Shot_2017_08_03_at_18_28_14.png" alt="Screen_Shot_2017_08_03_at_18_28_14" border="0"></a>  
+    
+  ````   
+  def create  
+    @booking = Booking.new(booking_params)  
+    @booking.user_id = current_user.id  
+    respond_to do |format|  
+     ~~~~  
+  end  
+  ````  
+    
 
 # Note  
-  * Inspect  
+  ### Inspect  
   ````    
    <%= @room.images.inspect %>    
   ````  
       
-  * [number to currency](https://apidock.com/rails/ActionView/Helpers/NumberHelper/number_to_currency)      
+  ### [number to currency](https://apidock.com/rails/ActionView/Helpers/NumberHelper/number_to_currency)      
   ````  
   <p>  
     <strong>Price:</strong>  
@@ -99,40 +113,32 @@ gem 'carrierwave', '~> 1.0'
   </p>    
   ````      
     
-  * Rails helper  
-    create helper method to turn true / false boolean into Yes / No.  
-    ````    
-     def yes_or_no(input)    
-      if input == true              
-         'Yes'    
-      else    
-         'No'    
-      end    
-     end    
-    ````     
-    ````      
-     def yes_or_no(input)    
-      if input          
-         'Yes'    
-      else    
-         'No'    
-      end    
-     end    
-    ````    
-    ````      
-    def yes_or_no(input)    
-      input ? 'Yes' : 'No'      
-    end        
-    ````   
-    And change view page as following.       
-    ````     
-    <p>  
-      <strong>Pets:</strong>    
-      <%= yes_or_no(@room.pets) %>    
-    </p>      
-    ````        
-       
+  ### Rails helper  
+  create helper method to turn true / false boolean into Yes / No.  
+  ````    
+  def yes_or_no(input)   |    def yes_or_no(input)   |    def yes_or_no(input)    
+    if input == true     |      if input             |      input ? 'Yes' : 'No'   
+      'Yes'              |        'Yes'              |    end   
+    else                 |      else                 |   
+      'No'               |        'No'               |   
+    end                  |      end                  |   
+  end                    |    end                    |   
+  ````     
+      
+  And change view page as following.         
+  ````     
+  <p>    
+    <strong>Pets:</strong>       
+    <%= yes_or_no(@room.pets)%>       
+  </p>         
+  ````           
     
+  ### Send prameters to a link    
+  ````      
+  <%= link_to 'Book Now', new_booking_path(room_id: @room_id)%>   
+  ````   
+     
+         
        
 
 

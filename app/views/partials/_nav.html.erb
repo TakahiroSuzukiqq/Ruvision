@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav">
        <% if user_signed_in? %>
         <li><%= link_to "New Room", new_room_path, class: "button", type: "button" %></li>
+        <li><%= link_to "Rooms", rooms_path, class: "button", type: "button" %></li>
        <% else %>
        <% end %> 
         <li><a href="#">Link</a></li>

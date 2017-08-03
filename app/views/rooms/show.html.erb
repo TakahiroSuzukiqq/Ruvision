@@ -75,3 +75,7 @@
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
+
+<div class="booking_button">
+  <%= link_to 'Book Now', new_booking_path(room_id: @room.id), class: 'btn btn-primary' %>
+</div>
