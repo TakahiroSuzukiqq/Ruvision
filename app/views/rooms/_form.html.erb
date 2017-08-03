@@ -12,8 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :price per night%>
+    <%= form.label :price %>
     <%= form.number_field :price, id: :room_price %>
+    <br>
+    <%="(*Price per night in USD)"%>
   </div>
 
   <div class="field">

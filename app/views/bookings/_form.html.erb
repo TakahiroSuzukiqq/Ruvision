@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :room_id %>
-    <%= form.text_field :room_id, id: :booking_room_id %>
+    <%= form.hidden_field :room_id, id: :booking_room_id, value: params[:room_id] %> 
   </div>
 
   <div class="field">
