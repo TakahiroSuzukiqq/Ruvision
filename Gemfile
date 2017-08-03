@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'gravatar_image_tag'
 gem 'dotenv-rails'
+gem 'carrierwave', '~> 1.0'
 
 
 

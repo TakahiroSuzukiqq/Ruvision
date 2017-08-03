@@ -25,7 +25,9 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.7'  
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'  
 gem 'gravatar_image_tag'  
-gem 'dotenv-rails', require: 'dotenv/rails-now'    
+gem 'dotenv-rails', require: 'dotenv/rails-now'  
+gem 'xmlrpc'   
+gem 'carrierwave', '~> 1.0'  
 ````    
   
   
@@ -51,7 +53,13 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
    
   * Dotenv :  
     [gem 'dotenv-rails'](https://github.com/bkeepers/dotenv)              
-    
+      
+  * Xmlrpc :  
+    [gem 'xmlrpc'](https://github.com/ruby/xmlrpc)  
+      
+  * CarrierWave :
+    [gem 'carrierwave'](https://github.com/carrierwaveuploader/carrierwave)   
+  
           
 # Issue & Solution  
  * couldn't find file 'jquery' with type 'application/javascript  
@@ -64,7 +72,7 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
  * Gravatar  
    [gem 'gravatar-ultimate'](https://github.com/sinisterchipmunk/gravatar) is only supported for rails v3.1, 3.2, and 4.0+, and for some reason, I couldn't use it for rails v5.1.2 so I used [gem 'gravatar_image_tag'](https://github.com/mdeering/gravatar_image_tag) instead.  
     ````  
-     <%= image_tag(gravatar_image_url('YOUR_RESISTERD_EMAIL_ADDRESS_FOR_GRAVATAR'.gsub('spam', 'mdeering'))) %>  
+    <%= image_tag(gravatar_image_url(current_user.email.gsub('spam', 'mdeering'))) %>
     ````    
       
         

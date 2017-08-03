@@ -1,6 +1,10 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'dotenv'
+puts ENV['EMAIL']
+Dotenv.load
+puts ENV['EMAIL']
 
 Bundler.require(*Rails.groups)
 
