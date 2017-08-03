@@ -1,16 +1,16 @@
 require_relative 'boot'
 
 require 'rails/all'
-require 'dotenv'
-puts ENV['EMAIL']
-Dotenv.load
-puts ENV['EMAIL']
+# require 'dotenv'
+# puts ENV['EMAIL']
+# Dotenv.load
+# puts ENV['EMAIL']
 
-Bundler.require(*Rails.groups)
+# Bundler.require(*Rails.groups)
 
-Dotenv::Railtie.load
+# Dotenv::Railtie.load
 
-EMAIL = ENV['EMAIL']
+# EMAIL = ENV['EMAIL']
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

@@ -60,5 +60,14 @@
   <%= @room.parties %>
 </p>
 
+<div class="image_class">
+  <% @room.images.each do |image| %>
+     <img src="<%= image.url %>" class="image_size">
+  <% end %>
+</div>
+  <%= @room.images.inspect %>
+  <br>
+  <br>
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
