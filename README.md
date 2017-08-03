@@ -84,10 +84,55 @@ gem 'carrierwave', '~> 1.0'
  * Duplicate error    
    If you will see error associated with database - schama and will not be able to do rake db:migrate, google `duplicate erro ` or `rake db:drop` like [this](https://stackoverflow.com/questions/4116067/purge-or-recreate-a-ruby-on-rails-database). But I don't recommend to delete `rake db:drop` & recreate db because you'll lose your existing db. I don't take any responsibility to this error and all of the issues associated with this project including README, as well.  
      
+
+# Note  
+  * Inspect  
+  ````    
+   <%= @room.images.inspect %>    
+  ````  
+      
+  * [number to currency](https://apidock.com/rails/ActionView/Helpers/NumberHelper/number_to_currency)      
+  ````  
+  <p>  
+    <strong>Price:</strong>  
+    <%= number_to_currency(@room.price) %>   #rails helper method to change a number into currency
+  </p>    
+  ````      
+    
+  * Rails helper  
+    create helper method to turn true / false boolean into Yes / No.  
+    ````    
+     def yes_or_no(input)    
+      if input == true              
+         'Yes'    
+      else    
+         'No'    
+      end    
+     end    
+    ````     
+    ````      
+     def yes_or_no(input)    
+      if input          
+         'Yes'    
+      else    
+         'No'    
+      end    
+     end    
+    ````    
+    ````      
+    def yes_or_no(input)    
+      input ? 'Yes' : 'No'      
+    end        
+    ````   
+    And change view page as following.       
+    ````     
+    <p>  
+      <strong>Pets:</strong>    
+      <%= yes_or_no(@room.pets) %>    
+    </p>      
+    ````        
        
     
-
-
        
 
 

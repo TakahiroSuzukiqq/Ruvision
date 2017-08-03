@@ -2,7 +2,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @room.price %>
+  <%= number_to_currency(@room.price) + " per night in USD "%> 
 </p>
 
 <p>
@@ -27,47 +27,51 @@
 
 <p>
   <strong>Pets:</strong>
-  <%= @room.pets %>
+  <%= yes_or_no(@room.pets) %>
 </p>
 
 <p>
   <strong>Smoking:</strong>
-  <%= @room.smoking %>
+  <%= yes_or_no(@room.smoking) %>
 </p>
 
 <p>
   <strong>Wifi:</strong>
-  <%= @room.wifi %>
+  <%= yes_or_no(@room.wifi) %>
 </p>
 
 <p>
   <strong>Bathrooms:</strong>
-  <%= @room.bathrooms %>
+  <%= yes_or_no(@room.bathrooms) %>
 </p>
 
 <p>
   <strong>Bath:</strong>
-  <%= @room.bath %>
+  <%= yes_or_no(@room.bath) %>
 </p>
 
 <p>
   <strong>Share:</strong>
-  <%= @room.share %>
+  <%= yes_or_no(@room.share) %>
 </p>
 
 <p>
   <strong>Parties:</strong>
-  <%= @room.parties %>
+  <%= yes_or_no(@room.parties) %>
 </p>
 
-<div class="image_class">
-  <% @room.images.each do |image| %>
-     <img src="<%= image.url %>" class="image_size">
-  <% end %>
-</div>
-  <%= @room.images.inspect %>
-  <br>
-  <br>
+  <div class="image_class">
+    <% @room.images.each do |image| %>
+       <% if @room.images != nil %>
+         <img src="<%= image.url %>" class="image_size">
+       <% else %>
+         <%= "No images for this room" %>
+       <% end %>
+    <% end %>
+  </div>
+
+<br>
+<br>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
