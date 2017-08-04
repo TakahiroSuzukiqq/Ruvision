@@ -72,8 +72,8 @@ gem 'stripe'
   * Scope :  
     [Rails guide Scope](http://guides.rubyonrails.org/active_record_querying.html#scopes)    
 
-  * Stripe : 
-    [stripe.com](https://dashboard.stripe.com)  
+  * Stripe :     
+    [stripe.com](https://dashboard.stripe.com)    
     [stripe docs / checkout for rails](https://stripe.com/docs/checkout/rails)    
     [stripe test numbers and tokens](https://stripe.com/docs/testing#cards)  
     
