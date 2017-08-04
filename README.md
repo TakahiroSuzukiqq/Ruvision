@@ -64,8 +64,11 @@ gem 'carrierwave', '~> 1.0'
       
   * CarrierWave :
     [gem 'carrierwave'](https://github.com/carrierwaveuploader/carrierwave)   
-  
-          
+
+  * Scope :  
+    [Rails guide Scope](http://guides.rubyonrails.org/active_record_querying.html#scopes)    
+        
+            
 # Issue & Solution  
  * "couldn't find file 'jquery' with type 'application/javascript" error
    In Rails 5.1.2, when I tried to implement Bootstrap and run on the local browser, the app said [couldn't find file 'jquery' with type 'application/javascript'](https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome).        
