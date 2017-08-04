@@ -22,6 +22,8 @@ Add `approved` attribte to `bookings` table & `rake db:migrate`
  * You can see each path by typing `$ rake routes` in your terminal   
  * You can see the room you created by typing `$ rails c` & `Room.all`(all the rooms) or `Room.last`    
  * You can add attributes to each post by typing like following. `b.update_attributes(user_id: 1)`  
+ * With `Booking.cout` you can check booking approved data.    
+   And you can also check status by typing `Booking.where(approved: false)` or `Booking.approved`    
 ````  
   
 ````  
