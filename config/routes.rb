@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :rooms
   root 'pages#home'
   get 'hostdashboard', to: 'pages#host_dashboard'
+  get 'guestdashboard', to: 'pages#guest_dashboard'
+
 
   get 'pages/properties'
 

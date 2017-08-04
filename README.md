@@ -140,7 +140,15 @@ gem 'carrierwave', '~> 1.0'
   ````      
   <%= link_to 'Book Now', new_booking_path(room_id: @room_id)%>   
   ````   
-     
+
+  ### Update attibute in your terminal       
+    
+<a href="https://ibb.co/mNC42F"><img src="https://image.ibb.co/hjQP2F/Screen_Shot_2017_08_04_at_18_21_34.png" alt="Screen_Shot_2017_08_04_at_18_21_34" border="0"></a>    
+    
+    
+  
+
+  
          
        
 
