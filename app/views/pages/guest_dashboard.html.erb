@@ -1,6 +1,5 @@
 <h1>Guest Dachborad</h1>
 
- <%=  @approved_bookings.inspect %>
 
 <h3>Ready for Payment</h3>
 
@@ -22,7 +21,7 @@
         <td><%= booking.end_date %></td>
         <td><%= number_to_currency(booking.room.price) %></td>
         <td><%= booking.room.title %></td>
-        <td>Peyment btn</td>
+        <td><%= render 'partials/stripe', booking: booking %></td>
       </tr>
     <% end %>
   </tbody>
