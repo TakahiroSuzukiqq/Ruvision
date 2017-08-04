@@ -17,7 +17,8 @@ $ rails g uploader "UPLOADER NAME (eg:Room)"
 $ rails g migration add_"ANY CLASS NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRIBUTE"  
 Create Booking table & `rake db:migrate`    
 Add `approved` attribte to `bookings` table & `rake db:migrate`  
-  
+Creating charges controller  
+    
 
  * You can see each path by typing `$ rake routes` in your terminal   
  * You can see the room you created by typing `$ rails c` & `Room.all`(all the rooms) or `Room.last`    
@@ -36,6 +37,7 @@ gem 'gravatar_image_tag'
 gem 'dotenv-rails', require: 'dotenv/rails-now'  
 gem 'xmlrpc'   
 gem 'carrierwave', '~> 1.0'  
+gem 'stripe'    
 ````    
   
   
@@ -69,7 +71,13 @@ gem 'carrierwave', '~> 1.0'
 
   * Scope :  
     [Rails guide Scope](http://guides.rubyonrails.org/active_record_querying.html#scopes)    
-        
+
+  * Stripe : 
+    [stripe.com](https://dashboard.stripe.com)  
+    [stripe docs / checkout for rails](https://stripe.com/docs/checkout/rails)    
+    [stripe test numbers and tokens](https://stripe.com/docs/testing#cards)  
+    
+    
             
 # Issue & Solution  
  * "couldn't find file 'jquery' with type 'application/javascript" error
@@ -149,7 +157,11 @@ gem 'carrierwave', '~> 1.0'
     
     
   
-
+  ### bash_profile    
+  ````  
+  $ atom ~/.bash_profile  
+  $ echo $"YOUR API KEY OR SECRET KEY NAME"
+  ````
   
          
        
