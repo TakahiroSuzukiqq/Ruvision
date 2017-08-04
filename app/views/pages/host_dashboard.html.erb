@@ -10,6 +10,7 @@
       <th>Booking time</th>
       <th>Guests Number</th>
       <th>Approved?</th>
+      <th>Update</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,7 @@
         <td><%= booking.created_at %></td>
         <td><%= booking.guest_number %></td>
         <td><%= booking.approved %></td>
+        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
       </tr>
     <% end %>
   <% end %>
