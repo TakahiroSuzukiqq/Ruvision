@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  resources :bookings
-  resources :rooms
+  
   root 'pages#home'
   get 'hostdashboard', to: 'pages#host_dashboard'
   get 'guestdashboard', to: 'pages#guest_dashboard'
-
-
   get 'pages/properties'
+ 
+  resources :bookings do
+    member do
+      resources :charges
+    end
+  end
+ 
 
   resources :charges
   resources :rooms

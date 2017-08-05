@@ -10,14 +10,16 @@ $ rails g devise:install
 $ rails g devise user  
 $ rake db:migrate   
 $ rails g controller pages home  
-$ rails g scaffold "ANY CLASS NAME & CONDITIONS"  
+$ rails g scaffold "MODEL NAME & CONDITIONS"  
    eg: $ rails g scaffold Room price:integer description:text ~~~       
 $ rake db:migrate  
 $ rails g uploader "UPLOADER NAME (eg:Room)"  
-$ rails g migration add_"ANY CLASS NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRIBUTE"  
+$ rails g migration add_"ANY MODEL NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRIBUTE"  
 Create Booking table & `rake db:migrate`    
 Add `approved` attribte to `bookings` table & `rake db:migrate`  
-Creating charges controller  
+Creating charges controller   
+Create Transaction model and attributes & rake db:migrate  
+  
     
 
  * You can see each path by typing `$ rake routes` in your terminal   
@@ -96,7 +98,7 @@ gem 'stripe'
              
     
  * Duplicate error    
-   If you will see error associated with database - schama and will not be able to do rake db:migrate, google `duplicate erro ` or `rake db:drop` like [this](https://stackoverflow.com/questions/4116067/purge-or-recreate-a-ruby-on-rails-database). But I don't recommend to delete `rake db:drop` & recreate db because you'll lose your existing db. I don't take any responsibility to this error and all of the issues associated with this project including README, as well.  
+   If you will see error associated with database - schama and will not be able to do rake db:migrate, google `duplicate erro ` or `rake db:drop` like [this](https://stackoverflow.com/questions/4116067/purge-or-recreate-a-ruby-on-rails-database). But I don't recommend to delete `rake db:drop` & recreate db because you'll lose your existing db. I don't take any responsibility to this error and all of the issues & problems associated with this project including README, as well.  
 
  * "User must exist" error    
   When trying to book below error had caused so passed user id inside the `def create` function in the booking controller.   
@@ -157,20 +159,16 @@ gem 'stripe'
     
     
   
-  ### bash_profile    
+  ### Bash profile    
   ````  
   $ atom ~/.bash_profile  
   $ echo $"YOUR API KEY OR SECRET KEY NAME"
+  ````  
+    
+  ### Migration rollback    
   ````
-  
-         
-       
-
-
-
-
-     
-
-
-
-   
+  $ rake db:rollback  
+  ````  
+    
+      
+      
