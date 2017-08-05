@@ -1,4 +1,26 @@
-# Basic Installation  
+# Description    
+  I created this app to review Ruby and Ruby on Rails, implemented login/out, image upload, post and book, payment functions.  
+  Now I'm implementimg other functions such as contact and search and so on, and do styling.    
+      
+        
+          
+# Overall    
+* [App Image](#section1)       
+* [Basic Installation](#section2)     
+* [Docs](#section3)     
+* [Issue & Solution](#section4)     
+* [Note](#section5)     
+       
+             
+                
+# <a name="section1"> App Image    
+<a href="https://ibb.co/bvo2ra"><img src="https://image.ibb.co/bJxvBa/Screen_Shot_2017_08_06_at_00_20_28.png" alt="Screen_Shot_2017_08_06_at_00_20_28" border="0"></a>    
+<a href="https://ibb.co/e7woWa"><img src="https://image.ibb.co/b2khra/Screen_Shot_2017_08_06_at_00_20_43.png" alt="Screen_Shot_2017_08_06_at_00_20_43" border="0"></a>    
+<a href="https://ibb.co/k1Bu4v"><img src="https://image.ibb.co/hK9gjv/Screen_Shot_2017_08_06_at_00_21_14.png" alt="Screen_Shot_2017_08_06_at_00_21_14" border="0"></a>      
+    
+
+         
+# <a name="section2"> Basic Installation    
 ````  
 Command Line    
   
@@ -18,8 +40,8 @@ $ rails g migration add_"ANY MODEL NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRI
 Create Booking table & `rake db:migrate`    
 Add `approved` attribte to `bookings` table & `rake db:migrate`  
 Creating charges controller   
-Create Transaction model and attributes & rake db:migrate  
-  
+Create Transaction model and attributes & rake db:migrate    
+Add "paid" attirbute to booking model    
     
 
  * You can see each path by typing `$ rake routes` in your terminal   
@@ -28,7 +50,7 @@ Create Transaction model and attributes & rake db:migrate
  * With `Booking.cout` you can check booking approved data.    
    And you can also check status by typing `Booking.where(approved: false)` or `Booking.approved`    
 ````  
-  
+    
 ````  
 Gem installation  
   
@@ -41,9 +63,9 @@ gem 'xmlrpc'
 gem 'carrierwave', '~> 1.0'  
 gem 'stripe'    
 ````    
-  
-  
-# Docs  
+    
+    
+# <a name="section3"> Docs  
   * Devise :  
   [gem 'devise'](https://github.com/plataformatec/devise)  
   [Login/out](https://github.com/plataformatec/devise/wiki/How-To:-Add-sign_in,-sign_out,-and-sign_up-links-to-your-layout-template)
@@ -78,10 +100,10 @@ gem 'stripe'
     [stripe.com](https://dashboard.stripe.com)    
     [stripe docs / checkout for rails](https://stripe.com/docs/checkout/rails)    
     [stripe test numbers and tokens](https://stripe.com/docs/testing#cards)  
-    
-    
-            
-# Issue & Solution  
+      
+      
+              
+# <a name="section4"> Issue & Solution  
  * "couldn't find file 'jquery' with type 'application/javascript" error
    In Rails 5.1.2, when I tried to implement Bootstrap and run on the local browser, the app said [couldn't find file 'jquery' with type 'application/javascript'](https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome).        
    So just added [jquery-rails 4.3.1](https://rubygems.org/gems/jquery-rails/versions/4.3.1) in gem file and bundle install again.    
@@ -114,7 +136,7 @@ gem 'stripe'
   ````  
     
 
-# Note  
+# <a name="section5"> Note  
   ### Inspect  
   ````    
    <%= @room.images.inspect %>    

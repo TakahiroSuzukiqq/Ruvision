@@ -10,5 +10,6 @@ class PagesController < ApplicationController
     @bookings = current_user.bookings
     @approved_bookings = @bookings.is_approved
     @pending_bookings = @bookings.pending
+    @paid_bookings = @bookings.paid    
   end
 end
