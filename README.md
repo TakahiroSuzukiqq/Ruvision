@@ -37,11 +37,14 @@ $ rails g scaffold "MODEL NAME & CONDITIONS"
 $ rake db:migrate  
 $ rails g uploader "UPLOADER NAME (eg:Room)"  
 $ rails g migration add_"ANY MODEL NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRIBUTE"  
-Create Booking table & `rake db:migrate`    
-Add `approved` attribte to `bookings` table & `rake db:migrate`  
-Creating charges controller   
-Create Transaction model and attributes & rake db:migrate    
-Add "paid" attirbute to booking model    
+*Create Booking table & `rake db:migrate`    
+*Add `approved` attribte to `bookings` table & `rake db:migrate`  
+*Create charges controller   
+*Create Transaction model and attributes & rake db:migrate    
+*Add "paid" attirbute to booking model  
+*Add user_type to Users   
+*Create admin page  
+ 
     
 
  * You can see each path by typing `$ rake routes` in your terminal   
@@ -100,8 +103,11 @@ gem 'stripe'
     [stripe.com](https://dashboard.stripe.com)    
     [stripe docs / checkout for rails](https://stripe.com/docs/checkout/rails)    
     [stripe test numbers and tokens](https://stripe.com/docs/testing#cards)  
+
+  * Rolify :        
+    [Rolify](https://github.com/RolifyCommunity/rolify)  
       
-      
+  
               
 # <a name="section4"> Issue & Solution  
  * "couldn't find file 'jquery' with type 'application/javascript" error

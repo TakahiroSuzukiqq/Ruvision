@@ -14,13 +14,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-       <% if user_signed_in? %>
+       <% if current_user.has_attribute? :admin %>
         <li><%= link_to "New Room", new_room_path, class: "button", type: "button" %></li>
         <li><%= link_to "Rooms", rooms_path, class: "button", type: "button" %></li>
        <% else %>
        <% end %> 
+       <% if user_signed_in? %>
+        <li><a href="admin/index">Admin</a></li>
+       <% end %> 
         <li><a href="/hostdashboard">Hosts</a></li>
         <li><a href="/guestdashboard">Guests</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
@@ -35,7 +39,7 @@
           </li>
         <% else %>
           <li>
-            <%= link_to('Login', new_user_session_path)  %>  
+            <%= link_to('Login', new_user_session_path)  %>
           </li>
           <li>
             <%= link_to('Register', new_user_registration_path)  %>
