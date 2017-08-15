@@ -211,4 +211,18 @@ gem 'rolify'
   ````
   $ rake db:rollback  
   ````  
-  
+     
+  ### Rolify  
+  If you setup admin page link in your navbar, you have to setup rolify if statement inside sign/in if statement.  
+  Before signing in no role is given.  
+  ````  
+  <% if user_signed_in? %>  
+     <% if current_user.has_role? :admin %>  
+        ~~~~  
+     <% end %>   
+  <% end %>  
+  ````  
+      
+          
+              
+              
