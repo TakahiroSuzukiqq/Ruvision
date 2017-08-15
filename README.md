@@ -37,14 +37,14 @@ $ rails g scaffold "MODEL NAME & CONDITIONS"
 $ rake db:migrate  
 $ rails g uploader "UPLOADER NAME (eg:Room)"  
 $ rails g migration add_"ANY MODEL NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRIBUTE"  
-*Create Booking table & `rake db:migrate`    
-*Add `approved` attribte to `bookings` table & `rake db:migrate`  
-*Create charges controller   
-*Create Transaction model and attributes & rake db:migrate    
-*Add "paid" attirbute to booking model  
-*Add user_type to Users   
-*Create admin page  
- 
+* Create Booking table & `rake db:migrate`    
+* Add `approved` attribte to `bookings` table & `rake db:migrate`  
+* Create charges controller   
+* Create Transaction model and attributes & rake db:migrate    
+* Add "paid" attirbute to booking model  
+* Add user_type to Users   
+* Create admin page  
+$ rails g rolify Role User
     
 
  * You can see each path by typing `$ rake routes` in your terminal   
@@ -65,6 +65,7 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'xmlrpc'   
 gem 'carrierwave', '~> 1.0'  
 gem 'stripe'    
+gem 'rolify'     
 ````    
     
     
@@ -140,7 +141,20 @@ gem 'stripe'
      ~~~~  
   end  
   ````  
-    
+   
+ * Rolify StandardError: Directly inheriting from ActiveRecord::Migration is not supported.   
+   [Directly inheriting from ActiveRecord::Migration is not supported](https://github.com/RolifyCommunity/rolify/issues/444)    
+   ````     
+   Rolify migration table in migrate folder add `[5.0]`.  
+   class RolifyCreateRoles < ActiveRecord::Migration[5.0]  
+      def change    
+      ~~~~    
+      end    
+    end    
+   ````      
+      
+         
+
 
 # <a name="section5"> Note  
   ### Inspect  
@@ -197,6 +211,4 @@ gem 'stripe'
   ````
   $ rake db:rollback  
   ````  
-    
-      
-      
+  
