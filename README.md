@@ -70,42 +70,42 @@ gem 'rolify'
     
     
 # <a name="section3"> Docs  
-  ### Devise :  
+  * Devise :  
   [gem 'devise'](https://github.com/plataformatec/devise)  
   [Login/out](https://github.com/plataformatec/devise/wiki/How-To:-Add-sign_in,-sign_out,-and-sign_up-links-to-your-layout-template)
        
-  ### Foundation (styling) :     
+  * Foundation (styling)         
     [Foundation docs](http://foundation.zurb.com/sites/docs/installation.html)  
     [Foundation apps](http://foundation.zurb.com/apps.html)  
     [Foundation kitchen sink](http://foundation.zurb.com/sites/docs/kitchen-sink.html)  
     [gem 'foundation-rails'](https://github.com/zurb/foundation-rails)   
     
-  ### Bootstrap (styling) :  
+  * Bootstrap (styling)    
     [Bootstrap getting started](http://getbootstrap.com/getting-started/)  
     [gem 'bootstrap'](https://github.com/twbs/bootstrap-rubygem)  
       
-  ### Gravatar :  
+  * Gravatar      
     [gravator.com](https://en.gravatar.com/)  
     [gem 'gravatar-ultimate' for rails v. 3.1, 3.2, and 4.0](https://github.com/sinisterchipmunk/gravatar)    
    
-  ### Dotenv :  
+  * Dotenv    
     [gem 'dotenv-rails'](https://github.com/bkeepers/dotenv)              
       
-  ### Xmlrpc :  
+  * Xmlrpc     
     [gem 'xmlrpc'](https://github.com/ruby/xmlrpc)  
       
-  ### CarrierWave :
+  * CarrierWave      
     [gem 'carrierwave'](https://github.com/carrierwaveuploader/carrierwave)   
 
-  ### Scope :  
+  * Scope    
     [Rails guide Scope](http://guides.rubyonrails.org/active_record_querying.html#scopes)    
 
-  ### Stripe :     
+  * Stripe          
     [stripe.com](https://dashboard.stripe.com)    
     [stripe docs / checkout for rails](https://stripe.com/docs/checkout/rails)    
     [stripe test numbers and tokens](https://stripe.com/docs/testing#cards)  
 
-  ### Rolify :        
+  * Rolify           
     [Rolify](https://github.com/RolifyCommunity/rolify)  
       
   
