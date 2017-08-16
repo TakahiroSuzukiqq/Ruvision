@@ -6,6 +6,10 @@ class User < ApplicationRecord
     self.add_role(:member) if self.roles.blank?
   end
 
+  def admin?
+    has_role?(:admin)
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

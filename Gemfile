@@ -12,8 +12,8 @@ gem 'gravatar_image_tag'
 gem 'dotenv-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'stripe'
-gem "rolify"
-
+gem 'rolify'
+gem 'pundit'
 
 
 
