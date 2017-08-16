@@ -36,9 +36,9 @@
         <td><%= yes_or_no(room.bath) %></td>
         <td><%= yes_or_no(room.share) %></td>
         <td><%= yes_or_no(room.parties) %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'See more', room %></td>
+        <td><%#= link_to 'Edit', edit_room_path(room) %></td>
+        <td><%#= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

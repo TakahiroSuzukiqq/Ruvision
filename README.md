@@ -24,9 +24,7 @@
   
            
 # <a name="section2"> Basic Installation    
-````  
-Command Line    
-  
+````     
 $ rails new YOUR_APP_NAME --database=postgresql  
 $ rake db:create  
 $ rake db:migrate  
@@ -47,7 +45,8 @@ $ rails g migration add_"ANY MODEL NAME"_to_"TABLE NAME" "ANY NAME:TYPE OF ATTRI
 * Add "paid" attirbute to booking model  
 * Add user_type to Users   
 * Create admin page  
-$ rails g rolify Role User
+$ rails g rolify Role User  
+$ rails g pundit:install
     
 
  * You can see each path by typing `$ rake routes` in your terminal   
@@ -68,7 +67,8 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'xmlrpc'   
 gem 'carrierwave', '~> 1.0'  
 gem 'stripe'    
-gem 'rolify'     
+gem 'rolify'   
+gem 'pundit'           
 ````    
   
         
@@ -111,11 +111,14 @@ gem 'rolify'
     [stripe test numbers and tokens](https://stripe.com/docs/testing#cards)  
 
   * Rolify           
-    [Rolify](https://github.com/RolifyCommunity/rolify)  
-
-          
-    
-              
+    [Rolify](https://github.com/RolifyCommunity/rolify)    
+     
+  * Pundit  
+    [Pundit](https://github.com/elabs/pundit)  
+  
+            
+      
+                
 # <a name="section4"> Issue & Solution  
  ### "couldn't find file 'jquery' with type 'application/javascript" error
    In Rails 5.1.2, when I tried to implement Bootstrap and run on the local browser, the app said [couldn't find file 'jquery' with type 'application/javascript'](https://stackoverflow.com/questions/22582097/sprocketsfilenotfound-in-staticpageshome).        
